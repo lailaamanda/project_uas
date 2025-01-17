@@ -38,8 +38,9 @@ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   @include('navbar')
 
 
-<main style="margin-top: 90px;" class="container">
-<h1>Helloo</h1>
+<main style="margin-top: 90px;">
+<div id="map"></div>
+
 </main>
 
   <script src={{ asset('assets/js/jquery.min.js') }}></script>
@@ -48,6 +49,38 @@ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <script src={{ asset('assets/js/click-scroll.js') }}></script>
   <script src={{ asset('assets/js/custom.js') }}></script>
 
+  <script>
+    var map = L.map('map').setView([-7.6138524,112.4579055], 8);
+    
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    const kabkotas = {!! json_encode($kabkotas) !!}
 
+
+    const dataKabkota = kabkotas.map(kabkota => ({
+        type : "Feature",
+        properties:{
+            name : kabkota.name,
+            kepadatan_penduduk : kabkota.kepadatan_penduduk,
+        },
+        geometry: {
+            type : kabkota.type_polygon,
+            coordinates : JSON.parse(kabkota.polygon),
+        }
+    }));
+
+    const geoJson = {
+        type : "FeatureCollection",
+        features : dataKabkota,
+    };
+
+
+L.geoJson(geoJson).addTo(map);
+         
+  
+  </script>
 </body>
 </html>

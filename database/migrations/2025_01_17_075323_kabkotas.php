@@ -19,7 +19,9 @@ return new class extends Migration
             $table->double('longitude');
             $table->string('kepadatan_penduduk');
             $table->string('sekolah_sma');
-            $table->string('rumah_sakit'); 
+            $table->string('rumah_sakit');
+            $table->enum('type_polygon', ['Polygon', 'MultiPolygon'])->default('Polygon');
+            $table->longText('polygon');
             $table->timestamps();
         });
     }

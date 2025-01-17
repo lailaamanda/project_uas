@@ -12,5 +12,8 @@ class KabkotaController extends Controller
         $kabkotas = Kabkota::all();
         return view('kabkota', ['kabkotas' => $kabkotas]);
     }
-
+    public function penduduk(){
+        $kabkotas = Kabkota:: all();
+        return view('penduduk', ['kabkotas' =>$kabkotas]);
+    }
 }

@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/kabkota/peta', [KabkotaController::class, 'index']);
+Route::get('/kabkota/penduduk', [KabkotaController::class, 'penduduk']);
