@@ -19,25 +19,21 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color : #fff;" onmouseover="this.style.color=' #13547a'" " onmouseout="this.style.color='#fff'">Kabupaten / Kota</a>
 
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                    <li><a class="dropdown-item" href="/kabkota/peta">Peta Kabkota</a></li>
+                    <li><a class="dropdown-item" href="/kabkota/peta">Peta Tematik Kabkota</a></li>
 
-                    <li><a class="dropdown-item" href="contact.html">Data Kab / Kota </a></li>
+                    <li><a class="dropdown-item" href="/kabkota/data">Data Kab / Kota </a></li>
                 </ul>
             </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Peta Tematik</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Peta Tematik Data Non Spasial</a>
 
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="topics-listing.html">Kepadatan Penduduk</a></li>
-                        <li><a class="dropdown-item" href="contact.html">Jumlah Rumah Sakit</a></li>
-                        <li><a class="dropdown-item" href="contact.html">Jumlah Sekolah</a></li>
+                        <li><a class="dropdown-item" href="/kabkota/penduduk">Kepadatan Penduduk</a></li>
+                        <li><a class="dropdown-item" href="/kabkota/rumah_sakit">Jumlah Rumah Sakit</a></li>
+                        <li><a class="dropdown-item" href="/kabkota/sekolah">Jumlah Sekolah</a></li>
                     </ul>
                 </li>
             </ul>
-
-            <div class="d-none d-lg-block">
-                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-            </div>
         </div>
     </div>
 </nav>

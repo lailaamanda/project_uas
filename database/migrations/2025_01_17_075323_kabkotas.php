@@ -17,11 +17,9 @@ return new class extends Migration
             $table->string('alt_name');
             $table->double('latitude');
             $table->double('longitude');
-            $table->string('kepadatan_penduduk');
-            $table->string('sekolah_sma');
-            $table->string('rumah_sakit');
-            $table->enum('type_polygon', ['Polygon', 'MultiPolygon'])->default('Polygon');
-            $table->longText('polygon');
+            $table->double('kepadatan_penduduk');
+            $table->integer('sekolah_sma');
+            $table->integer('rumah_sakit');
             $table->timestamps();
         });
     }
